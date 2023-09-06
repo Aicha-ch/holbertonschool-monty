@@ -7,49 +7,48 @@
  */
 int main(int argc, char *argv[])
 {
-	int open_return, i, j, read_line, integer, match;
+	int open_return, i, j, integer, match = 0;
 	char *token = NULL;
 	char *tok = NULL;
-	argv[1] *file_ptr;
-	char **monty_line;
-	size_t *len;
+	char **monty_line = NULL;
+	size_t len = 0;
+	stack_t *stack = NULL;
 
 	instruction_t opcodes[] = {
-		{"pall",  }
-		{"pint",  }
-		{"pop",   }
-	        {"swap",  }
-		{"add",   }
-		{"nop",   }
+		{"pall", _pall}
+		{"pint", _pint}
+		{"pop", _pop}
+	        {"swap", _swap}
+		{"add", _add}
+		{"nop", _nop}
 		{NULL, NULL}
 	};
 
 	if (argc != 2)
 	{
-		perror("USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	open_return = open(argv[1], O_RDONLY);
-	if (open_return < 0)
+	if (open_return == -1)
 	{
 		perror("Error: Can't open file <file>\n");
 		exit(EXIT_FAILURE);
 	}
-	for (j = 0; getline(&monty_line, &len, &file_ptr) > 0;);
+	while (getline(&monty_line, &len, open_return) != -1);
 	{
 		token = strtok(monty_line, "\n")
 			if (token == NULL)
 			{
-				j++;
+				continue;
 			}
-			token = strtok(NULL, "\n");
 
 		i = 0;
 		while (opcodes[i].opcode != NULL)
 		{
 			if strcmp(token, opcodes[i].opcode == 0)
 			{
-				opcodes[i].f;
+				opcodes[i].f(&stack, j + 1);
 				match = 1;
 				break;
 			}
@@ -59,12 +58,11 @@ int main(int argc, char *argv[])
 		{
 			if (strcmp(token, "push") == 0)
 			{
-				tok = strtok(token, " ");
 				tok = strtok(NULL, " ");
 				if (tok != NULL)
 				{
 					integer = atoi(tok);
-					push_func(&token);
+					_push(&stack, integer);
 				}
 			}
 			else
