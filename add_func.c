@@ -1,3 +1,5 @@
+#include "monty.h"
+
 /**
  * _add - Adds the top two elements of the stack.
  * @stack: Pointer to the head of the stack.
@@ -5,7 +7,6 @@
  */
 
 void _add(stack_t **stack, unsigned int line_number)
-
 {
     if (*stack == NULL || (*stack)->next == NULL)
     {
@@ -14,5 +15,4 @@ void _add(stack_t **stack, unsigned int line_number)
     }
 
     (*stack)->next->n += (*stack)->n;
-    _pop(stack, line_number);
-}
+    _pop(stack, line_
