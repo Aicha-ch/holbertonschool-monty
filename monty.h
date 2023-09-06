@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 
 typedef struct stack_s
 {
@@ -19,7 +20,8 @@ typedef struct ins truction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
+int main(int argc, char *argv[]);
+void free_stack(stack_t *stack);
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
