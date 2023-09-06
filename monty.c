@@ -64,16 +64,31 @@ int main(int argc, char *argv[])
 					integer = atoi(tok);
 					_push(&stack, integer);
 				}
+				else
+				{
+					fprintf(stderr, "L%d: usage: push integer\n", j + 1);
+					free_stack(&stack);
+					close(open_return);
+					free(monty_line);
+					exit(EXIT_FAILURE);
+				}
 			}
 			else
 			{
-				perror("L<line_number>: unknown instruction <opcode>");
+				fprintf(stderr, "L%d: unknown instruction %s\n", j + 1, token);
+				free_stack(&stack);
+				close(open_return);
+				free(monty_line);
 				exit(EXIT_FAILURE);
 			}
 		}
 		match = 0;
+		j++;
 	}
-	close(argv[1])
+	close(open_return);
+	free(monty_line);
+	free_stack(&stack);
+
 	return (0);
 }	
 
