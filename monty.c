@@ -7,20 +7,21 @@
  */
 int main(int argc, char *argv[])
 {
-	int open_return, i, j, integer, match = 0;
+	FILE *monty_file;
+	int i, j, integer, match = 0;
 	char *token = NULL;
 	char *tok = NULL;
-	char **monty_line = NULL;
+	char *monty_line = NULL;
 	size_t len = 0;
 	stack_t *stack = NULL;
 
 	instruction_t opcodes[] = {
-		{"pall", _pall}
-		{"pint", _pint}
-		{"pop", _pop}
-	        {"swap", _swap}
-		{"add", _add}
-		{"nop", _nop}
+		{"pall", _pall},
+		{"pint", _pint},
+		{"pop", _pop},
+	        {"swap", _swap},
+		{"add", _add},
+		{"nop", _nop},
 		{NULL, NULL}
 	};
 
@@ -29,15 +30,15 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	open_return = open(argv[1], O_RDONLY);
-	if (open_return == -1)
+	monty_file = fopen(argv[1], "r");
+	if (monty_file == NULL)
 	{
-		perror("Error: Can't open file <file>\n");
+		fprintf(stderr, "Error: Can't open file <file>\n");
 		exit(EXIT_FAILURE);
 	}
-	while (getline(&monty_line, &len, open_return) != -1);
+	while (getline(&monty_line, &len, monty_file) != -1)
 	{
-		token = strtok(monty_line, "\n")
+		token = strtok(monty_line, "\n");
 			if (token == NULL)
 			{
 				continue;
@@ -46,7 +47,7 @@ int main(int argc, char *argv[])
 		i = 0;
 		while (opcodes[i].opcode != NULL)
 		{
-			if strcmp(token, opcodes[i].opcode == 0)
+			if (strcmp(token, opcodes[i].opcode) == 0)
 			{
 				opcodes[i].f(&stack, j + 1);
 				match = 1;
@@ -67,8 +68,8 @@ int main(int argc, char *argv[])
 				else
 				{
 					fprintf(stderr, "L%d: usage: push integer\n", j + 1);
-					free_stack(&stack);
-					close(open_return);
+					free_stack(stack);
+					fclose(monty_file);
 					free(monty_line);
 					exit(EXIT_FAILURE);
 				}
@@ -76,8 +77,8 @@ int main(int argc, char *argv[])
 			else
 			{
 				fprintf(stderr, "L%d: unknown instruction %s\n", j + 1, token);
-				free_stack(&stack);
-				close(open_return);
+				free_stack(stack);
+				fclose(monty_file);
 				free(monty_line);
 				exit(EXIT_FAILURE);
 			}
@@ -85,9 +86,9 @@ int main(int argc, char *argv[])
 		match = 0;
 		j++;
 	}
-	close(open_return);
+	fclose(monty_file);
 	free(monty_line);
-	free_stack(&stack);
+	free_stack(stack);
 
 	return (0);
 }	
