@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
 	FILE *monty_file;
-	int i, j, integer, match = 0;
+	int i, j = 0, integer, match = 0;
 	char *token = NULL;
 	char *tok = NULL;
 	char *monty_line = NULL;
@@ -33,12 +33,12 @@ int main(int argc, char *argv[])
 	monty_file = fopen(argv[1], "r");
 	if (monty_file == NULL)
 	{
-		fprintf(stderr, "Error: Can't open file <file>\n");
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	while (getline(&monty_line, &len, monty_file) != -1)
 	{
-		token = strtok(monty_line, "\n");
+		token = strtok(monty_line, " \n");
 			if (token == NULL)
 			{
 				continue;
