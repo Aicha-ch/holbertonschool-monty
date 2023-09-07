@@ -36,10 +36,10 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
   * Adds the top two elements of the stack/queue.
   * The result is stored in the second element from the top and the top element is popped.
 
-* **stack**
+* ```stack```
   * Switches a queue to stack mode.
 
-* **queue**
+* ```queue```
   * Switches a stack to queue mode.
 
 **To compile the program this command has to be executed**:
