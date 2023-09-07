@@ -1,6 +1,6 @@
 # **C – Stacks, Queues – LIFO, FIFO**
 
-![This is an image]( https:// https://zupimages.net/up/23/36/buld.jpg)
+![This is an image](https://zupimages.net/up/23/36/buld.jpg)
 
 ### **What is Monty Language ?** 
 
@@ -12,27 +12,27 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 
 # *** Monty Opcodes *** :
 
-* **push**
+* ```push```
   * Usage: `push <int>`
   * Pushes an element to the stack.
   * The parameter `<int>` must be an integer.
 
-* **pall**
+* ```pall```
   * Prints all values in the stack/queue, starting from the top.
 
-* **pint**
+* ```pint```
   * Prints the top value of the stack/queue.
 
-* **pop**
+* ```pop```
   * Removes the top element of the stack/queue.
 
-* **swap**
+* ```swap```
   * Swaps the top two elements of the stack/queue.
 
-* **nop**
+* ```nop```
   * Does not do anything.
 
-* **add**
+* ```add```
   * Adds the top two elements of the stack/queue.
   * The result is stored in the second element from the top and the top element is popped.
 
