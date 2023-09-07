@@ -43,7 +43,7 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
   * Switches a stack to queue mode.
 
 **To compile the program this command has to be executed**:
-````gcc -Wall -Werror -Wextra -pedantic *.c -o monty```
+```gcc -Wall -Werror -Wextra -pedantic *.c -o monty```
 
 **To run the shell is like this**:
 ```/monty```
