@@ -46,7 +46,7 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 ```gcc -Wall -Werror -Wextra -pedantic *.c -o monty```
 
 **To run the shell is like this**:
-```/monty```
+```./monty```
 
 ### **AUTHORS**
 **Aicha Chouikhi** - [Github]( https://github.com/Aicha-ch) 
