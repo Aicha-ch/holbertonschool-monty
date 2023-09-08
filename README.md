@@ -14,7 +14,7 @@ The objective of this endeavor is to develop an interpreter for Monty ByteCodes 
 Our interpreter can be executed in either a stack (Last-In, First-Out) or queue (First-In, First-Out) mode. You can switch the mode during the script execution. The interpreter has the capability to process a range of Monty opcodes, such as printing, performing mathematical operations, and more. A list of all the supported opcodes is provided below.
 
 
-### **MONTY OPCODES** :
+### **MONTY OPCODES** :wrench:
 
 * ```push```
   * Usage: `push <int>`
@@ -46,7 +46,8 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 * ```queue```
   * Switches a stack to queue mode.
 
-**To compile the program this command has to be executed**:
+**To compile the program this command has to be executed** :arrow_down:
+
 ```gcc -Wall -Werror -Wextra -pedantic *.c -o monty```
 
 **To run the shell is like this**:
@@ -54,7 +55,7 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 
 
 
-### **DATA STRUCTURES** :arrow_down:
+### **DATA STRUCTURES** :clipboard:
 
 Please use the following data structures for this project. Don’t forget to include them in your header file.
 ```
@@ -93,7 +94,7 @@ typedef struct instruction_s
 ```
 
 
-### **OUTPUT** :clipboard:
+### **OUTPUT** :arrow_forward:
 
 ![This is an image](https://zupimages.net/up/23/36/h0uo.png)
 
@@ -101,6 +102,7 @@ typedef struct instruction_s
 
 
 ### **AUTHORS** :pencil:
+
 **Aicha Chouikhi** - [Github]( https://github.com/Aicha-ch) 
 **Sabrina Papeau** - [Github](https://github.com/Holbiwan)
 
