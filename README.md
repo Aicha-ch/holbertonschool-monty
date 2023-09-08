@@ -50,6 +50,14 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 **To run the shell is like this**:
 ```./monty```
 
+
+### **OUTPUT** :
+
+![This is an image](https://zupimages.net/up/23/36/h0uo.png)
+
+![This is an image](https://zupimages.net/up/23/36/9vqj.png)
+
+
 ### **AUTHORS**
 **Aicha Chouikhi** - [Github]( https://github.com/Aicha-ch) 
 **Sabrina Papeau** - [Github](https://github.com/Holbiwan)
