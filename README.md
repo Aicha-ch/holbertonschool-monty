@@ -16,7 +16,6 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 
 ### **MONTY OPCODES** :wrench:
 
-```
 * ```push```
   * Usage: `push <int>`
   * Pushes an element to the stack.
@@ -46,7 +45,7 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 
 * ```queue```
   * Switches a stack to queue mode.
-```
+
 
 **To compile the program this command has to be executed** :arrow_down:
 
