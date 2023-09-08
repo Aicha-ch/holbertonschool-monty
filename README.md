@@ -55,9 +55,7 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 ```./monty```
 
 
-### **DATA STRUCTURES** :clipboard:
-
-Please use the following data structures for this project. Don’t forget to include them in your header file.
+### **DATA STRUCTURES USED** :clipboard:
 
 ```
 /**
