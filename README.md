@@ -2,7 +2,7 @@
 
 ![This is an image](https://zupimages.net/up/23/36/buld.jpg)
 
-### **What is Monty Language ?** 
+### **WHAT IS MONTY LANGUAGE ?** 
 
 Monty 0.98 is a scripting language initially compiled into Monty bytecodes, similar to Python.
 It depends on a distinct stack structure, featuring specific commands for its manipulation.
@@ -10,7 +10,7 @@ The objective of this endeavor is to develop an interpreter for Monty ByteCodes 
 
 Our interpreter can be executed in either a stack (Last-In, First-Out) or queue (First-In, First-Out) mode. You can switch the mode during the script execution. The interpreter has the capability to process a range of Monty opcodes, such as printing, performing mathematical operations, and more. A list of all the supported opcodes is provided below.
 
-### ** Monty Opcodes ** :
+### **MONTY OPCODES** :
 
 * ```push```
   * Usage: `push <int>`
