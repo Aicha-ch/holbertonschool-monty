@@ -16,6 +16,7 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 
 ### **MONTY OPCODES** :wrench:
 
+```
 * ```push```
   * Usage: `push <int>`
   * Pushes an element to the stack.
@@ -45,6 +46,7 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 
 * ```queue```
   * Switches a stack to queue mode.
+```
 
 **To compile the program this command has to be executed** :arrow_down:
 
@@ -54,10 +56,10 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 ```./monty```
 
 
-
 ### **DATA STRUCTURES** :clipboard:
 
 Please use the following data structures for this project. Don’t forget to include them in your header file.
+
 ```
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -74,7 +76,6 @@ typedef struct stack_s
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
-
 ```
 
 ```
