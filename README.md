@@ -53,7 +53,8 @@ Our interpreter can be executed in either a stack (Last-In, First-Out) or queue 
 ```./monty```
 
 
-### **DATA STRUCTURES** :bell:
+
+### **DATA STRUCTURES** :arrow_down:
 
 Please use the following data structures for this project. Don’t forget to include them in your header file.
 ```
@@ -92,14 +93,14 @@ typedef struct instruction_s
 ```
 
 
-### **OUTPUT** :
+### **OUTPUT** :clipboard:
 
 ![This is an image](https://zupimages.net/up/23/36/h0uo.png)
 
 ![This is an image](https://zupimages.net/up/23/36/9vqj.png)
 
 
-### **AUTHORS**
+### **AUTHORS** :pencil:
 **Aicha Chouikhi** - [Github]( https://github.com/Aicha-ch) 
 **Sabrina Papeau** - [Github](https://github.com/Holbiwan)
 
