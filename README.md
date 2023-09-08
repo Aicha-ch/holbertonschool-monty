@@ -2,6 +2,8 @@
 
 ![This is an image](https://zupimages.net/up/23/36/buld.jpg)
 
+![This is an image](https://zupimages.net/up/23/36/kugo.jpeg)
+
 ### **WHAT IS MONTY LANGUAGE ?** 
 
 Monty 0.98 is a scripting language initially compiled into Monty bytecodes, similar to Python.
